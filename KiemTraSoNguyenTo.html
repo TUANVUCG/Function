@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <input type="number" id="nhapSo" onchange="nhapSoNaoDo()" placeholder="Nhập một số đê bro" /></br>
+    <input type="text" id="soNguyenTo" placeholder="Nhận xét:"/></br>
+    <input type="text" id="tong" placeholder="Tổng" />
+    <script>
+        function nhapSoNaoDo() {
+            var a = document.getElementById("nhapSo").value;
+            let total = 0;
+            for (let i = 0; i <= a; i++) {
+                let k = true;
+                if (i <= 1) {
+                    continue;
+                } else {
+                    for (let j = 2; j < i; j++) {
+                        if (i % j == 0) {
+                            k = false;
+                            document.getElementById("soNguyenTo").value = "Hàng PHA KE rùi" ;
+                            break;
+                        }
+                    }
+                    if (k == true) {
+                        document.getElementById("soNguyenTo").value = "Hàng REAl nhé";
+                        total += i;
+                    }
+                }
+            }
+            document.getElementById("tong").value = ("Tổng là: " +total);
+        }
+    </script>
+</body>
+</html>
