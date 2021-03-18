@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var arr1 = [ 1,4,-3,6,54,-12,4];
+        var arr2 = [ 32,543,-23,65,6];
+        var arr3 = [7,0,12,-3,5,72];
+        var arr4 = [];
+        var arr5 = [0,0,0,0,0,0];
+        function timMin(arr) {
+            var min = arr[0];
+            for(var i = 0; i <arr.length; i++){
+                if(arr[i]<min){
+                    min = arr[i];
+                }
+            }return min;
+        }
+        document.write("Giá trị nhỏ nhất mảng 1 là: " + timMin(arr1));
+        document.write("<br>")
+        document.write("Giá trị nhỏ nhất mảng 2 là: " + timMin(arr2));
+        document.write("<br>")
+        document.write("Giá trị nhỏ nhất mảng 3 là: " + timMin(arr3));
+        document.write("<br>")
+        document.write("Giá trị nhỏ nhất mảng 4 là: " + timMin(arr4));
+        document.write("<br>")
+        document.write("Giá trị nhỏ nhất mảng 5 là: " + timMin(arr5));
+    </script>
+</body>
+</html>
