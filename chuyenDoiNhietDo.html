@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="number" placeholder="Nhập độ F nha babe"
+    oninput="convert(this.value)"/>
+    <p>Độ C là : <span id ="doC"></span> </p>
+</form>
+<script>
+    function convert(a) {
+        var dayLaDoF = parseFloat(a);
+        var dayLaDoC = (dayLaDoF-32)/1.8;
+        document.getElementById("doC").innerHTML = dayLaDoC;
+    }
+</script>
+</body>
+</html>
